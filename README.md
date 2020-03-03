@@ -1,4 +1,4 @@
-# ronu-hugo-theme
+# Ronu Hugo Theme
 Ronu is a clean and simple responsive theme for [hugo](https://gohugo.io). It simplicity lies in the fact that there is complete separation of html content and css classes.
 
 Live demo at: [softwareyoga.com](https://www.softwareyoga.com)
@@ -30,7 +30,7 @@ Instead, you will have beautifully formatted plain html without having to specif
 ```
 The uncluttered user interface (and clean code) make it a delight to work with, focussing on the most important aspect - The Content.
 
-![Ronu screenshot](https://github.com/softwareyoga/ronu-hugo-theme/images/screenshot.png)
+![Ronu screenshot](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot.png)
 
 
 ## Installation
@@ -108,8 +108,8 @@ Reference values for the 3 built in colour options are specified in the files 's
 
 To create your own theme, look to the file 'style-in-use.scss' and change the provided colors.
 
-![Ronu in dark mode](https://github.com/softwareyoga/ronu-hugo-theme/images/screenshot-dark.png)
-![Ronu in vader mode](https://github.com/softwareyoga/ronu-hugo-theme/images/screenshot-vader.png)
+![Ronu in dark mode](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot-dark.png)
+![Ronu in vader mode](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot-vader.png)
 
 ## Google Analytics
 
