@@ -1,0 +1,12 @@
+<footer>
+ <a href="#">&uarr;Back to top</a> || <a href="{{ .Site.BaseURL }}index.xml">RSS</a> || <a href="{{ $.Site.Params.TwitterURL }}">Twitter</a> || <a href="{{ $.Site.Params.LinkedInURL }}">LinkedIn</a><br>
+ {{ $.Site.Params.email }}
+</footer>
+
+{{ if not .Site.IsServer }}
+    {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+
+<!--a href="{{ .Site.BaseURL }}privacy-policy">Privacy-Policy</a>&nbsp;&vert;
+<a href="{{ .Site.BaseURL }}terms-conditions">Terms and Conditions</a-->
+<!--p>&copy; {{ now.Format "2006"}} {{ $.Site.Params.authorNname }}. All rights reserved. </p-->

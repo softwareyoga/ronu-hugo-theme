@@ -1,0 +1,34 @@
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{end}}</title>
+
+    <meta name="robots" content="noodp"/>
+    
+    {{ if .IsPage }}
+      <meta name="description" content="{{ .Description }}">
+    {{ else if .IsHome }}
+        <meta name="description" content="{{ .Site.Params.siteDescription }} by {{ .Site.Params.authorNname }}">
+    {{ else if .IsNode }}
+          <meta name="description" content="{{ .Title }}">
+    {{ end }}
+
+    <link rel="canonical" href="{{ .Permalink }}"/>
+  
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/schema.html" . }}
+
+    {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    <!-- Styles -->
+    <link rel="stylesheet" href='{{ "css/normalize.css" | absURL }}'>
+
+    {{- $inServerMode   := .Site.IsServer }}
+    {{- $cssTarget      := "css/style.css" }}
+    {{- $cssOptions     := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+    {{- $style          := resources.Get "scss/style-in-use.scss" | toCSS $cssOptions }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>

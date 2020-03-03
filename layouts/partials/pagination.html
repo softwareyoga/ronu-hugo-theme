@@ -1,0 +1,10 @@
+<hr>
+<section id="pagination">
+	{{ if .Paginator.HasPrev }}
+	    <a href="{{ .Paginator.Prev.URL }}"> Prev </a>
+	{{ end }}
+	<label>Page {{ .Paginator.PageNumber}} of {{.Paginator.TotalPages}}</label>
+	{{ if .Paginator.HasNext }}
+	    <a href="{{ .Paginator.Next.URL }}"> Next </a>
+	{{ end }}
+</section>

@@ -1,0 +1,11 @@
+{{ define "main" }}
+	{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
+
+	{{ range $paginator.Pages }}
+		<h2>{{ .Title }}{{ if .Draft }} ::Draft{{ end }}</h2>
+		{{ .Description | plainify | safeHTML }}
+		<a href="{{ .Permalink }}"> Read More.</a>
+	{{ end }}
+
+	{{ partial "pagination.html" . }}
+{{ end }}

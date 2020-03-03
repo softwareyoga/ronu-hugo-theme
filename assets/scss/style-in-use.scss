@@ -1,0 +1,16 @@
+$color-blossom: #2c8898;
+$color-fade: #982c61;
+
+$color-bg: #f9f9f9;
+$color-bg-alt: #f1f1f1;
+
+$color-text: #4a4a4a;
+$font-size-base: 1.8rem;
+
+$font-family-sans-serif: Verdana, Geneva, sans-serif;
+$font-family-serif: serif;
+
+/* Replace values above from the other sakura-*.scss files to generate a different theme */
+
+@import "main";
+@import "custom";

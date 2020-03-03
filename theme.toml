@@ -1,0 +1,13 @@
+name = "Ronu"
+license = "MIT"
+licenselink = "https://github.com/softwareyoga/ronu-hugo-theme/blob/master/LICENSE"
+description = "Clean and simple responsive theme for Hugo with complete separation of html content and css classes."
+homepage = "https://www.softwareyoga.com"
+tags = ["blog", "responsive", "minimal", "clean", "simple", "google-analytics", "minimalist", "syntax-highlighting", "minimalistic"]
+features = ["blog", "pagination", "clean", "no-css-html"]
+min_version = "0.64.1"
+
+# If the theme has a single author
+[author]
+    name = "Deepak Karanth"
+    homepage = "https://www.softwareyoga.com"

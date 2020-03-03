@@ -1,0 +1,8 @@
+{{ define "main" }}
+	{{ if and (.IsPage) (eq .Type "post") }}
+    	<h1>{{ .Title }}</h1>
+		<time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format "January 2, 2006" }}</time>
+  	{{ end }}	
+
+	{{ .Content }}	               			  
+{{ end }}
