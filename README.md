@@ -4,7 +4,8 @@ Ronu is a clean and simple responsive theme for [hugo](https://gohugo.io). It si
 Live demo at: [softwareyoga.com](https://www.softwareyoga.com)
 
 No more of messy html like this that is full of css classes...
-```
+
+```html
 <html>
 <body>
 	<div class="w3-row-padding w3-container">
@@ -17,9 +18,10 @@ No more of messy html like this that is full of css classes...
 	</body>
 </html>
 ```
+
 Instead, you will have beautifully formatted plain html without having to specify any css classes, thanks to [Sakura](https://oxal.org/projects/sakura) - A classless css framework.
 
-```
+```html
 <html>
 	<body>
 		<h1>Blog</h1>
@@ -28,6 +30,7 @@ Instead, you will have beautifully formatted plain html without having to specif
 	</body>
 </html>
 ```
+
 The uncluttered user interface (and clean code) make it a delight to work with, focussing on the most important aspect - The Content.
 
 ![Ronu screenshot](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot.png)
@@ -42,14 +45,18 @@ The uncluttered user interface (and clean code) make it a delight to work with, 
 ### Standard Installation
 
 To install Ronu as your default theme, first install this repository in the `themes/` directory:
+
 ```
     $ cd themes/
     $ git clone https://github.com/softwareyoga/ronu-hugo-theme
 ```
+
 Second, specify `ronu` as your default theme in the `config.toml` file. Just add the line
+
 ```
     theme = "ronu"
 ```
+
 at the top of the file.
 
 
