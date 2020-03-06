@@ -59,6 +59,17 @@ Second, specify `ronu` as your default theme in the `config.toml` file. Just add
 
 at the top of the file.
 
+## Base configuration
+
+First include the following configuration in the config file: 
+
+```toml
+# Site settings
+baseURL = "https://www.example.com/"
+languageCode = "en-us"
+title = "MySiteTitle"
+theme = "ronu"
+```
 
 ## Options
 
@@ -128,8 +139,8 @@ googleAnalytics = "Your tracking code"
 
 ## Author
 **Deepak Karanth**
-- https://github.com/softwareyoga
-- https://www.softwareyoga.com
+* https://github.com/softwareyoga
+* https://www.softwareyoga.com
 
 ## Contributing
 

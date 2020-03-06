@@ -24,11 +24,13 @@
     {{ end -}}
 
     <!-- Styles -->
-    <link rel="stylesheet" href='{{ "css/normalize.css" | absURL }}'>
-
+    {{- $normalize_css := resources.Get "css/normalize.css" }}
+   
     {{- $inServerMode   := .Site.IsServer }}
     {{- $cssTarget      := "css/style.css" }}
     {{- $cssOptions     := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
     {{- $style          := resources.Get "scss/style-in-use.scss" | toCSS $cssOptions }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{- $css := slice $normalize_css $style | resources.Concat "css/bundle.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $css.Permalink }}">
 </head>
