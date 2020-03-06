@@ -26,7 +26,7 @@ Instead, you will have beautifully formatted plain html without having to specif
 	<body>
 		<h1>Blog</h1>
 		<h2>Post Title></h2>
-		<p>Content follows...
+		<p>Content text</p>
 	</body>
 </html>
 ```
@@ -44,17 +44,24 @@ The uncluttered user interface (and clean code) make it a delight to work with, 
 
 ### Standard Installation
 
-To install Ronu as your default theme, first install this repository in the `themes/` directory:
+To install Ronu as your default theme, first clone this repository in the `themes/` directory:
 
 ```
-    $ cd themes/
     $ git clone https://github.com/softwareyoga/ronu-hugo-theme
 ```
 
-Second, specify `ronu` as your default theme in the `config.toml` file. Just add the line
+OR
+
+From the root of your site, execute:
 
 ```
-    theme = "ronu"
+git submodule add https://github.com/softwareyoga/ronu-hugo-theme.git themes/ronu-hugo-theme
+```
+
+Second, specify `ronu-hugo-theme` as your default theme in the `config.toml` file. Just add the line
+
+```
+    theme = "ronu-hugo-theme"
 ```
 
 at the top of the file.
@@ -68,7 +75,7 @@ First include the following configuration in the config file:
 baseURL = "https://www.example.com/"
 languageCode = "en-us"
 title = "MySiteTitle"
-theme = "ronu"
+theme = "ronu-hugo-theme"
 ```
 
 ## Options
@@ -81,8 +88,6 @@ Ronu includes some customizable options, applied via the config file.
 Create a list of menu item links in the nav bar by assigning "menu.main" in the front matter, like so:
 
 ```toml
-theme = "ronu"
-
 [[menu.main]]
 	name = "Blog"
 	url = "/blog/"
@@ -96,8 +101,6 @@ theme = "ronu"
 Inform your audience about your social presense in the footer, like so:
 
 ```toml
-theme = "ronu"
-
 [params]
 	authorNname = "Your Name"
 	twitterURL = "https://twitter.com/FooBar"
@@ -149,7 +152,7 @@ Primary goals are:
 
 - Keep it simple. (E.g. Do not add Disqus commenting as readability is the main aspect of this theme, not bells and whistles)
 - Keep minimal (or zero) default configuration.
-- Avoid interference of content with user-defined layouts.
+- Avoid interference of content templates with user-defined layouts (css).
 - Avoid using JS
 
 ## License
