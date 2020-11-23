@@ -31,7 +31,7 @@ Instead, you will have beautifully formatted plain html without having to specif
 </html>
 ```
 
-The uncluttered user interface (and clean code) make it a delight to work with, focussing on the most important aspect - The Content.
+The uncluttered user interface (and clean code) makes it a delight to work with, focussing on the most important aspect - The Content.
 
 ![Ronu screenshot](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot.png)
 
@@ -123,9 +123,9 @@ siteDescription = "Your awesome site description"
 
 ### Theme colours
 
-Ronu ships with 3 optional colour schemes based on [Sakura color scheme](https://github.com/oxalorg/sakura/tree/master/scss). To apply a particular colour, change the variables in 'style-in-use.scss'.
+Ronu ships with many colour schemes based on [Sakura color scheme](https://github.com/oxalorg/sakura/tree/master/scss). To apply a particular colour, change the variables in 'style-in-use.scss'.
 
-Reference values for the 3 built in colour options are specified in the files 'sakura-dark.scss', 'sakura-vader.scss' and 'sakura-white.scss'
+Reference values for the built in colour options are specified in the files 'sakura-white.scss', 'sakura-dark.scss', 'sakura-vader.scss' and 'sakura-white.scss' etc.
 
 To create your own theme, look to the file 'style-in-use.scss' and change the provided colors.
 

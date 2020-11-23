@@ -1,5 +1,5 @@
 {{ define "main" }}
-	{{ $paginator := .Paginate (.Pages) }}
+	{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
 
 	{{ range $paginator.Pages }}
 		<h2>{{ .Title }}{{ if .Draft }} ::Draft{{ end }}</h2>

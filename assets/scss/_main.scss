@@ -1,14 +1,14 @@
-/* Sakura.css v1.0.0
+/* Sakura.css v1.3.1
  * ================
  * Minimal css theme.
- * Project: https://github.com/oxalorg/sakura
+ * Project: https://github.com/oxalorg/sakura/
  */
 
 /* Body */
 
 html {
     font-size: 62.5%; // So that root size becomes 10px
-    font-family: $font-family-serif;
+    font-family: $font-family-base;
 }
 
 body {
@@ -39,16 +39,14 @@ body {
     word-wrap: break-word;
     -ms-word-break: break-all;
     word-break: break-word;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-heading;
     font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
     @include word-wrap;
 }
 
@@ -58,6 +56,11 @@ h3 { font-size: 1.75em }
 h4 { font-size: 1.5em }
 h5 { font-size: 1.25em }
 h6 { font-size: 1em }
+
+p {
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+}
 
 small, sub, sup {
     font-size: 75%;
@@ -76,10 +79,16 @@ a {
         border-bottom: 2px solid $color-text;
     }
 
+    &:visited {
+        color: darken($color-blossom, 10%);
+    }
+
 }
 
 ul {
     padding-left: 1.4em;
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
 }
 
 li {
@@ -87,14 +96,26 @@ li {
 }
 
 blockquote {
-    font-style: italic;
-    margin-left: 1.5em;
+    margin-left: 0px;
+    margin-right: 0px;
     padding-left: 1em;
-    border-left: 3px solid $color-blossom;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-right: 0.8em;
+    border-left: 5px solid $color-blossom;
+    margin-bottom: 2.5rem;
+    background-color: $color-bg-alt;
 }
 
-img {
+blockquote p {
+    margin-bottom: 0;
+}
+
+img, video {
+    height: auto;
     max-width: 100%;
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
 }
 
 /* Pre and Code */
@@ -104,6 +125,8 @@ pre {
     display: block;
     padding: 1em;
     overflow-x: auto;
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
 }
 
 code {
@@ -165,7 +188,7 @@ textarea {
         opacity: .5;
     }
 
-    &:focus, &:hover {
+    &:focus:enabled, &:hover:enabled {
         background-color: $color-fade;
         border-color: $color-fade;
         color: $color-bg;
@@ -173,7 +196,7 @@ textarea {
     }
 }
 
-textarea, select, input[type] {
+textarea, select, input {
     color: $color-text;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     margin-bottom: 10px;
@@ -196,5 +219,5 @@ input[type="checkbox"]:focus {
 label, legend, fieldset {
     display: block;
     margin-bottom: .5rem;
-    font-weight: 600; 
+    font-weight: 600;
 }
