@@ -8,7 +8,7 @@
     {{ if .IsPage }}
       <meta name="description" content="{{ .Description }}">
     {{ else if .IsHome }}
-        <meta name="description" content="{{ .Site.Params.siteDescription }} by {{ .Site.Params.authorNname }}">
+        <meta name="description" content="{{ .Site.Params.description }} by {{ .Site.Author.name }}">
     {{ else if .IsNode }}
           <meta name="description" content="{{ .Title }}">
     {{ end }}
@@ -32,5 +32,5 @@
     {{- $style          := resources.Get "scss/style-in-use.scss" | toCSS $cssOptions }}
 
     {{- $css := slice $normalize_css $style | resources.Concat "css/bundle.css" | resources.Minify }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}">
+	<link rel="stylesheet" href="{{ $css.Permalink }}">
 </head>

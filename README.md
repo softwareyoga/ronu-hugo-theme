@@ -40,7 +40,7 @@ The uncluttered user interface (and clean code) makes it a delight to work with,
 
 ### Requirements
 
-- Hugo 0.64.1 or higher (extended version because of usage of sass)
+- Hugo 0.91.2 or higher (extended version because of usage of sass)
 
 ### Standard Installation
 
@@ -76,6 +76,10 @@ baseURL = "https://www.example.com/"
 languageCode = "en-us"
 title = "MySiteTitle"
 theme = "ronu-hugo-theme"
+
+# By default Hugo assumes the section with most pages as the main section. This is configurable, like so:
+[params]
+	mainSections = ["post"]
 ```
 
 ## Options
@@ -91,41 +95,37 @@ Create a list of menu item links in the nav bar by assigning "menu.main" in the 
 [[menu.main]]
 	name = "Blog"
 	url = "/blog/"
+	weight = 1
 
 [[menu.main]]
 	name = "About"
 	url = "/about/"
+	weight = 2
 ```
 
 ### Social
 Inform your audience about your social presense in the footer, like so:
 
 ```toml
-[params]
-	authorNname = "Your Name"
+[author]
+	name = "Your Name"
 	twitterURL = "https://twitter.com/FooBar"
 	linkedinURL = "https://www.linkedin.com/in/FooBar"
 	email = "foobar@foobar.com"
 ```
 
-### Main section and siteDescription
-
-By default Ronu assumes the section with most pages as the main section. This is configurable, like so:
-
+### Site Description
+'description' is used in site heading and the meta info headers in the generated html, configurable as:
 ```toml
-mainSections = ["post"]
-```
-
-'siteDescription' is used in the meta info headers in the generated html, configurable as:
-```toml
-siteDescription = "Your awesome site description"
+[params]
+	description = "Your awesome site description"
 ```
 
 ### Theme colours
 
-Ronu ships with many colour schemes based on [Sakura color scheme](https://github.com/oxalorg/sakura/tree/master/scss). To apply a particular colour, change the variables in 'style-in-use.scss'.
+Ronu ships with 3 optional colour schemes based on [Sakura color scheme](https://github.com/oxalorg/sakura/tree/master/scss). To apply a particular colour, change the variables in 'style-in-use.scss'.
 
-Reference values for the built in colour options are specified in the files 'sakura-white.scss', 'sakura-dark.scss', 'sakura-vader.scss' and 'sakura-white.scss' etc.
+Reference values for the 3 built in colour options are specified in the files 'sakura-dark.scss', 'sakura-vader.scss' and 'sakura-white.scss'
 
 To create your own theme, look to the file 'style-in-use.scss' and change the provided colors.
 
