@@ -1,0 +1,15 @@
+nav ul {
+  padding: 0;
+}
+  
+nav ul li {
+  display: inline;
+  margin: 0 3% 0 0;
+  text-transform: uppercase;
+}
+
+#pagination {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
