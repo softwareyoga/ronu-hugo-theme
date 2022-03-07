@@ -1,46 +1,30 @@
 # Ronu Hugo Theme
-Ronu is a clean and simple responsive theme for [hugo](https://gohugo.io). It simplicity lies in the fact that there is complete separation of html content and css classes.
+Ronu is a clean and simple responsive theme for [hugo](https://gohugo.io). Generates beautifully formatted plain html without using any css classes, thanks to [Sakura](https://oxal.org/projects/sakura) - A classless css framework.
 
-Live demo at: [softwareyoga.com](https://www.softwareyoga.com)
+![Ronu screenshot](https://raw.githubusercontent.com/softwareyoga/ronu-hugo-theme/master/images/screenshot.png)
 
-No more of messy html like this that is full of css classes...
-
-```html
-<html>
-<body>
-	<div class="w3-row-padding w3-container">
-		<div class="w3-col l3 m2">
-			<h1>Blog</h1>
-		</div>
-		<div class="w3-col l6 m8">
-			<h2 class="w3-center w3-bold">Post Title</h2>
-		</div>  
-	</body>
-</html>
-```
-
-Instead, you will have beautifully formatted plain html without having to specify any css classes, thanks to [Sakura](https://oxal.org/projects/sakura) - A classless css framework.
-
-```html
-<html>
-	<body>
-		<h1>Blog</h1>
-		<h2>Post Title></h2>
-		<p>Content text</p>
-	</body>
-</html>
-```
+**Live demo** : [softwareyoga.com](https://www.softwareyoga.com)
 
 The uncluttered user interface (and clean code) makes it a delight to work with, focussing on the most important aspect - The Content.
 
-![Ronu screenshot](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot.png)
+## Features
 
+* Clean html generated with **no** css classes
+* Theming support
+* Lightning fast load times
+* Responsive on all screen sizes
+* Automatic dark/light mode based on system preference
+* Syntax highlighting
+* Pagination 
+* SEO Friendly
+* Google Analytics support
+* RSS feed
 
 ## Installation
 
 ### Requirements
 
-- Hugo 0.91.2 or higher (extended version because of usage of sass)
+- Hugo 0.91.2 or higher
 
 ### Standard Installation
 
@@ -66,7 +50,7 @@ Second, specify `ronu-hugo-theme` as your default theme in the `config.toml` fil
 
 at the top of the file.
 
-## Base configuration
+## Basic configuration
 
 First include the following configuration in the config file: 
 
@@ -93,13 +77,13 @@ Create a list of menu item links in the nav bar by assigning "menu.main" in the 
 
 ```toml
 [[menu.main]]
+	name = "Home"
+	url = "/"
+	weight = 1
+	
+[[menu.main]]
 	name = "Blog"
 	url = "/blog/"
-	weight = 1
-
-[[menu.main]]
-	name = "About"
-	url = "/about/"
 	weight = 2
 ```
 
@@ -123,14 +107,14 @@ Inform your audience about your social presense in the footer, like so:
 
 ### Theme colours
 
-Ronu ships with 3 optional colour schemes based on [Sakura color scheme](https://github.com/oxalorg/sakura/tree/master/scss). To apply a particular colour, change the variables in 'style-in-use.scss'.
+Ronu supports Automatic dark/light mode based on system preference.
+Ronu theming is based on [Sakura color scheme](https://github.com/oxalorg/sakura/tree/master/css).
 
-Reference values for the 3 built in colour options are specified in the files 'sakura-dark.scss', 'sakura-vader.scss' and 'sakura-white.scss'
+Files with reference values are available in the above link.
+To apply a particular theme, copy the css of your choice into the css directory and include it in the partial `head.html`.
 
-To create your own theme, look to the file 'style-in-use.scss' and change the provided colors.
-
-![Ronu in dark mode](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot-dark.png)
-![Ronu in vader mode](https://github.com/softwareyoga/ronu-hugo-theme/blob/master/images/screenshot-vader.png)
+![Ronu in dark mode](https://raw.githubusercontent.com/softwareyoga/ronu-hugo-theme/master/images/screenshot-dark.png)
+![Ronu in vader mode](https://raw.githubusercontent.com/softwareyoga/ronu-hugo-theme/master/images/screenshot-vader.png)
 
 ## Google Analytics
 

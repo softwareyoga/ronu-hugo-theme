@@ -23,14 +23,9 @@
         {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
-    <!-- Styles -->
-    {{- $normalize_css := resources.Get "css/normalize.css" }}
-   
-    {{- $inServerMode   := .Site.IsServer }}
-    {{- $cssTarget      := "css/style.css" }}
-    {{- $cssOptions     := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-    {{- $style          := resources.Get "scss/style-in-use.scss" | toCSS $cssOptions }}
-
-    {{- $css := slice $normalize_css $style | resources.Concat "css/bundle.css" | resources.Minify }}
-	<link rel="stylesheet" href="{{ $css.Permalink }}">
+	<!-- Styles from Sakura and Dark mode support -->
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/sakura.css" media="screen" />
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/sakura-dark.css" media="screen and (prefers-color-scheme: dark)" />
+	<!-- Custom CSS Styles -->
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css" />
 </head>
