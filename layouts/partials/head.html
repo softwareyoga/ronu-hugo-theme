@@ -20,7 +20,7 @@
     {{ template "_internal/schema.html" . }}
 
     {{ with .OutputFormats.Get "rss" -}}
-        {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
 	<!-- Styles from Sakura and Dark mode support -->
