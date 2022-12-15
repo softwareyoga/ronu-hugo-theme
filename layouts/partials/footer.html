@@ -1,6 +1,7 @@
 <footer>
  <a href="#">&uarr;Back to top</a> || <a href="{{ .Site.BaseURL }}index.xml">RSS</a> 
- {{ with .Site.Author.twitterurl }} || <a href="{{ . }}">Twitter</a> {{ end }} 
+ {{ with .Site.Author.twitterurl }} || <a href="{{ . }}">Twitter</a> {{ end }}
+ {{ with .Site.Author.githuburl }} || <a href="{{ . }}">GitHub</a> {{ end }}
  {{ with .Site.Author.linkedinurl }} || <a href="{{ . }}">LinkedIn</a> {{ end }}
  {{ with .Site.Author.email }} || {{ . }} {{ end }}
 </footer>
