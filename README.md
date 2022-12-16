@@ -94,6 +94,7 @@ Inform your audience about your social presense in the footer, like so:
 [author]
 	name = "Your Name"
 	twitterURL = "https://twitter.com/FooBar"
+	githubURL = "https://github.com/FooBar"
 	linkedinURL = "https://www.linkedin.com/in/FooBar"
 	email = "foobar@foobar.com"
 ```
